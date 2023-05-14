@@ -1,0 +1,1341 @@
+Index: home_module/templates/home_module/index_page.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'shared/_layout.html' %}\r\n{% load static %}\r\n{% block title %}\r\n\r\n{% endblock %}\r\n\r\n{% block content %}\r\n    <style>\r\n\r\n    </style>\r\n    <body>\r\n\r\n\r\n    <!-- ***** Preloader Start ***** -->\r\n    <div id=\"preloader\">\r\n\r\n        <div class=\"jumper\">\r\n            <div></div>\r\n            <div></div>\r\n            <div></div>\r\n        </div>\r\n    </div>\r\n    <!-- ***** Preloader End ***** -->\r\n\r\n\r\n    <!-- ***** Welcome Area Start ***** -->\r\n    <div class=\"welcome-area\" id=\"welcome\">\r\n\r\n        <!-- ***** Header Text Start ***** -->\r\n        <div class=\"header-text\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"offset-xl-3 col-xl-6 offset-lg-2 col-md-12 col-sm-12\">\r\n                        <h1><strong>CgLancer</strong><br><strong></strong></h1>\r\n                        {#                        <p>Softy Pinko is a professional Bootstrap 4.0 theme designed by Template Mo#}\r\n                        {#                        for your company at absolutely free of charge</p>#}\r\n                        {#                        <a href=\"#features\" class=\"main-button-slider\">Discover More</a>#}\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!-- ***** Header Text End ***** -->\r\n    </div>\r\n    <!-- ***** Welcome Area End ***** -->\r\n\r\n    <!-- ***** Features Small Start ***** -->\r\n    <section class=\"section home-feature\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12\">\r\n                    <div class=\"categories\">\r\n                        <button class=\"category-btn active\" data-filter=\"all\">All</button>\r\n                        <button class=\"category-btn\" data-filter=\"nature\">Lighting</button>\r\n                        <button class=\"category-btn\" data-filter=\"food\">Ceramic</button>\r\n                        <button class=\"category-btn\" data-filter=\"pets\">Furniture</button>\r\n                    </div>\r\n                    {# <a href=\"#features\" class=\"main-button-slider\">Discover More</a> #}\r\n                </div>\r\n            </div>\r\n        </div>\r\n        {% for gallery in gallery %}\r\n        <div class=\"container\">\r\n            <div class=\"col-lg-12\">\r\n                <div class=\"gallery d-flex justify-content-center\">\r\n                    <div class=\"col-lg-3 col-md-2 col-sm-2 col-xs-2 item nature features-small-item fade-in\">\r\n                        <img src=\"{% static 'images/right-image.png' %}\" class=\" loading fade-in \" alt=\"Nature 1\">\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-2 col-sm-2 col-xs-2 item food features-small-item fade-in \">\r\n                        <img src=\"{% static 'images/left-image.png' %}\" class=\"loading fade-in \" alt=\"Food 1\">\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-2 col-sm-2 col-xs-2 item pets features-small-item fade-in \">\r\n                        <img src=\"{% static 'images/right-image.png' %}\" class=\"loading fade-in \" alt=\"Pet 1\">\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-2 col-sm-2 col-xs-2 item nature features-small-item fade-in\">\r\n                        <img src=\"{% static 'images/left-image.png' %}\" class=\"loading fade-in\" alt=\"Nature 2\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        {% endfor %}\r\n    </section>\r\n    <!-- ***** Features Small End ***** -->\r\n\r\n    <!-- ***** Features Big Item Start ***** -->\r\n    <section class=\"section padding-top-70 padding-bottom-0\" id=\"features\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-5 col-md-12 col-sm-12 align-self-center\"\r\n                     data-scroll-reveal=\"enter left move 30px over 0.6s after 0.4s\">\r\n                    <img src=\"{% static 'images/left-image.png' %}\" class=\"rounded img-fluid d-block mx-auto\" alt=\"App\">\r\n                </div>\r\n                <div class=\"col-lg-1\"></div>\r\n                <div class=\"col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix\">\r\n                    <div class=\"left-heading\">\r\n                        <h2 class=\"section-title\">Let’s discuss about you project</h2>\r\n                    </div>\r\n                    <div class=\"left-text\">\r\n                        <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo\r\n                            efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"hr\"></div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Features Big Item End ***** -->\r\n\r\n    <!-- ***** Features Big Item Start ***** -->\r\n    <section class=\"section padding-bottom-100\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix\">\r\n                    <div class=\"left-heading\">\r\n                        <h2 class=\"section-title\">We can help you to grow your business</h2>\r\n                    </div>\r\n                    <div class=\"left-text\">\r\n                        <p>Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis nisi, a bibendum lectus libero\r\n                            vitae urna. Sed id leo eu dolor luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam\r\n                            quis dolor elit.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-lg-1\"></div>\r\n                <div class=\"col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big\"\r\n                     data-scroll-reveal=\"enter right move 30px over 0.6s after 0.4s\">\r\n                    <img src=\"{% static 'images/right-image.png' %}\" class=\"rounded img-fluid d-block mx-auto\"\r\n                         alt=\"App\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Features Big Item End ***** -->\r\n\r\n    <!-- ***** Home Parallax Start ***** -->\r\n    <section class=\"mini\" id=\"work-process\">\r\n        <div class=\"mini-content\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"offset-lg-3 col-lg-6\">\r\n                        <div class=\"info\">\r\n                            <h1>Work Process</h1>\r\n                            <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula\r\n                                ut ex. Donec ante diam.</p>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n\r\n                <!-- ***** Mini Box Start ***** -->\r\n                <div class=\"row\">\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Get Ideas</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Sketch Up</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Discuss</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Revise</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Approve</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"col-lg-2 col-md-3 col-sm-6 col-6\">\r\n                        <a href=\"#\" class=\"mini-box\">\r\n                            <i><img src=\"{% static 'images/work-process-item-01.png' %}\" alt=\"\"></i>\r\n                            <strong>Launch</strong>\r\n                            <span>Godard pabst prism fam cliche.</span>\r\n                        </a>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Mini Box End ***** -->\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Home Parallax End ***** -->\r\n\r\n    <!-- ***** Testimonials Start ***** -->\r\n    <section class=\"section\" id=\"testimonials\">\r\n        <div class=\"container\">\r\n            <!-- ***** Section Title Start ***** -->\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"center-heading\">\r\n                        <h2 class=\"section-title\">What do they say?</h2>\r\n                    </div>\r\n                </div>\r\n                <div class=\"offset-lg-3 col-lg-6\">\r\n                    <div class=\"center-text\">\r\n                        <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a\r\n                            turpis. Ut sagittis lectus libero.</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- ***** Section Title End ***** -->\r\n\r\n            <div class=\"row\">\r\n                <!-- ***** Testimonials Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"team-item\">\r\n                        <div class=\"team-content\">\r\n                            <i><img src=\"{% static 'images/testimonial-icon.png' %}\" alt=\"\"></i>\r\n                            <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci.\r\n                                Maecenas a finibus odio.</p>\r\n                            <div class=\"user-image\">\r\n                                <img src=\"http://placehold.it/60x60\" alt=\"\">\r\n                            </div>\r\n                            <div class=\"team-info\">\r\n                                <h3 class=\"user-name\">Catherine Soft</h3>\r\n                                <span>Managing Director</span>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Testimonials Item End ***** -->\r\n\r\n                <!-- ***** Testimonials Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"team-item\">\r\n                        <div class=\"team-content\">\r\n                            <i><img src=\"{% static 'images/testimonial-icon.png' %}\" alt=\"\"></i>\r\n                            <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae,\r\n                                placerat nibh. Cras maximus venenatis molestie.</p>\r\n                            <div class=\"user-image\">\r\n                                <img src=\"http://placehold.it/60x60\" alt=\"\">\r\n                            </div>\r\n                            <div class=\"team-info\">\r\n                                <h3 class=\"user-name\">Kelvin Wood</h3>\r\n                                <span>Digital Marketer</span>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Testimonials Item End ***** -->\r\n\r\n                <!-- ***** Testimonials Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"team-item\">\r\n                        <div class=\"team-content\">\r\n                            <i><img src=\"{% static 'images/testimonial-icon.png' %}\" alt=\"\"></i>\r\n                            <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante\r\n                                ultrices molestie. Ut vehicula et diam at aliquam.</p>\r\n                            <div class=\"user-image\">\r\n                                <img src=\"http://placehold.it/60x60\" alt=\"\">\r\n                            </div>\r\n                            <div class=\"team-info\">\r\n                                <h3 class=\"user-name\">David Martin</h3>\r\n                                <span>Website Manager</span>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Testimonials Item End ***** -->\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Testimonials End ***** -->\r\n\r\n    <!-- ***** Pricing Plans Start ***** -->\r\n    <section class=\"section colored\" id=\"pricing-plans\">\r\n        <div class=\"container\">\r\n            <!-- ***** Section Title Start ***** -->\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"center-heading\">\r\n                        <h2 class=\"section-title\">Pricing Plans</h2>\r\n                    </div>\r\n                </div>\r\n                <div class=\"offset-lg-3 col-lg-6\">\r\n                    <div class=\"center-text\">\r\n                        <p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis\r\n                            congue risus volutpat.</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- ***** Section Title End ***** -->\r\n\r\n            <div class=\"row\">\r\n                <!-- ***** Pricing Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\"\r\n                     data-scroll-reveal=\"enter bottom move 50px over 0.6s after 0.2s\">\r\n                    <div class=\"pricing-item\">\r\n                        <div class=\"pricing-header\">\r\n                            <h3 class=\"pricing-title\">Starter</h3>\r\n                        </div>\r\n                        <div class=\"pricing-body\">\r\n                            <div class=\"price-wrapper\">\r\n                                <span class=\"currency\">$</span>\r\n                                <span class=\"price\">14.50</span>\r\n                                <span class=\"period\">monthly</span>\r\n                            </div>\r\n                            <ul class=\"list\">\r\n                                <li class=\"active\">60 GB space</li>\r\n                                <li class=\"active\">600 GB transfer</li>\r\n                                <li class=\"active\">Pro Design Panel</li>\r\n                                <li>15-minute support</li>\r\n                                <li>Unlimited Emails</li>\r\n                                <li>24/7 Security</li>\r\n                            </ul>\r\n                        </div>\r\n                        <div class=\"pricing-footer\">\r\n                            <a href=\"#\" class=\"main-button\">Purchase Now</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Pricing Item End ***** -->\r\n\r\n                <!-- ***** Pricing Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\"\r\n                     data-scroll-reveal=\"enter bottom move 50px over 0.6s after 0.4s\">\r\n                    <div class=\"pricing-item active\">\r\n                        <div class=\"pricing-header\">\r\n                            <h3 class=\"pricing-title\">Premium</h3>\r\n                        </div>\r\n                        <div class=\"pricing-body\">\r\n                            <div class=\"price-wrapper\">\r\n                                <span class=\"currency\">$</span>\r\n                                <span class=\"price\">21.50</span>\r\n                                <span class=\"period\">monthly</span>\r\n                            </div>\r\n                            <ul class=\"list\">\r\n                                <li class=\"active\">120 GB space</li>\r\n                                <li class=\"active\">1200 GB transfer</li>\r\n                                <li class=\"active\">Pro Design Panel</li>\r\n                                <li class=\"active\">15-minute support</li>\r\n                                <li>Unlimited Emails</li>\r\n                                <li>24/7 Security</li>\r\n                            </ul>\r\n                        </div>\r\n                        <div class=\"pricing-footer\">\r\n                            <a href=\"#\" class=\"main-button\">Purchase Now</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Pricing Item End ***** -->\r\n\r\n                <!-- ***** Pricing Item Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\"\r\n                     data-scroll-reveal=\"enter bottom move 50px over 0.6s after 0.6s\">\r\n                    <div class=\"pricing-item\">\r\n                        <div class=\"pricing-header\">\r\n                            <h3 class=\"pricing-title\">Advanced</h3>\r\n                        </div>\r\n                        <div class=\"pricing-body\">\r\n                            <div class=\"price-wrapper\">\r\n                                <span class=\"currency\">$</span>\r\n                                <span class=\"price\">42.00</span>\r\n                                <span class=\"period\">monthly</span>\r\n                            </div>\r\n                            <ul class=\"list\">\r\n                                <li class=\"active\">250 GB space</li>\r\n                                <li class=\"active\">5000 GB transfer</li>\r\n                                <li class=\"active\">Pro Design Panel</li>\r\n                                <li class=\"active\">15-minute support</li>\r\n                                <li class=\"active\">Unlimited Emails</li>\r\n                                <li class=\"active\">24/7 Security</li>\r\n                            </ul>\r\n                        </div>\r\n                        <div class=\"pricing-footer\">\r\n                            <a href=\"#\" class=\"main-button\">Purchase Now</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Pricing Item End ***** -->\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Pricing Plans End ***** -->\r\n\r\n    <!-- ***** Counter Parallax Start ***** -->\r\n    <section class=\"counter\">\r\n        <div class=\"content\">\r\n            <div class=\"container\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-lg-3 col-md-6 col-sm-12\">\r\n                        <div class=\"count-item decoration-bottom\">\r\n                            <strong>126</strong>\r\n                            <span>Projects</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-6 col-sm-12\">\r\n                        <div class=\"count-item decoration-top\">\r\n                            <strong>63</strong>\r\n                            <span>Happy Clients</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-6 col-sm-12\">\r\n                        <div class=\"count-item decoration-bottom\">\r\n                            <strong>18</strong>\r\n                            <span>Awards Wins</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"col-lg-3 col-md-6 col-sm-12\">\r\n                        <div class=\"count-item\">\r\n                            <strong>27</strong>\r\n                            <span>Countries</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Counter Parallax End ***** -->\r\n\r\n    <!-- ***** Blog Start ***** -->\r\n    <section class=\"section\" id=\"blog\">\r\n        <div class=\"container\">\r\n            <!-- ***** Section Title Start ***** -->\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"center-heading\">\r\n                        <h2 class=\"section-title\">Blog Entries</h2>\r\n                    </div>\r\n                </div>\r\n                <div class=\"offset-lg-3 col-lg-6\">\r\n                    <div class=\"center-text\">\r\n                        <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat\r\n                            nibh. Cras maximus venenatis molestie.</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- ***** Section Title End ***** -->\r\n\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"blog-post-thumb\">\r\n                        <div class=\"img\">\r\n                            <img src=\"{% static 'images/blog-item-01.png' %}\" alt=\"\">\r\n                        </div>\r\n                        <div class=\"blog-content\">\r\n                            <h3>\r\n                                <a href=\"#\">Vivamus ac vehicula dui</a>\r\n                            </h3>\r\n                            <div class=\"text\">\r\n                                Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc.\r\n                                Nulla in sagittis eros. Aliquam egestas augue.\r\n                            </div>\r\n                            <a href=\"#\" class=\"main-button\">Read More</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"blog-post-thumb\">\r\n                        <div class=\"img\">\r\n                            <img src=\"{% static 'images/blog-item-02.png' %}\" alt=\"\">\r\n                        </div>\r\n                        <div class=\"blog-content\">\r\n                            <h3>\r\n                                <a href=\"#\">Phasellus convallis augue</a>\r\n                            </h3>\r\n                            <div class=\"text\">\r\n                                Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna\r\n                                ut velit venenatis, vel ultrices sapien mattis.\r\n                            </div>\r\n                            <a href=\"#\" class=\"main-button\">Read More</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <div class=\"blog-post-thumb\">\r\n                        <div class=\"img\">\r\n                            <img src=\"{% static 'images/blog-item-03.png' %}\" alt=\"\">\r\n                        </div>\r\n                        <div class=\"blog-content\">\r\n                            <h3>\r\n                                <a href=\"#\">Nam gravida purus non</a>\r\n                            </h3>\r\n                            <div class=\"text\">\r\n                                Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus\r\n                                euismod odio, ut tempus enim varius eu.\r\n                            </div>\r\n                            <a href=\"#\" class=\"main-button\">Read More</a>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Blog End ***** -->\r\n\r\n    <!-- ***** Contact Us Start ***** -->\r\n    <section class=\"section colored\" id=\"contact-us\">\r\n        <div class=\"container\">\r\n            <!-- ***** Section Title Start ***** -->\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <div class=\"center-heading\">\r\n                        <h2 class=\"section-title\">Talk To Us</h2>\r\n                    </div>\r\n                </div>\r\n                <div class=\"offset-lg-3 col-lg-6\">\r\n                    <div class=\"center-text\">\r\n                        <p>Maecenas pellentesque ante faucibus lectus vulputate sollicitudin. Cras feugiat hendrerit\r\n                            semper.</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <!-- ***** Section Title End ***** -->\r\n\r\n            <div class=\"row\">\r\n                <!-- ***** Contact Text Start ***** -->\r\n                <div class=\"col-lg-4 col-md-6 col-sm-12\">\r\n                    <h5 class=\"margin-bottom-30\">Keep in touch</h5>\r\n                    <div class=\"contact-text\">\r\n                        <p>110-220 Quisque diam odio, maximus ac consectetur eu, 10260\r\n                            <br>auctor non lorem</p>\r\n                        <p>You are NOT allowed to re-distribute Softy Pinko template on any template collection\r\n                            websites. Thank you.</p>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Contact Text End ***** -->\r\n\r\n                <!-- ***** Contact Form Start ***** -->\r\n                <div class=\"col-lg-8 col-md-6 col-sm-12\">\r\n                    <div class=\"contact-form\">\r\n                        <form id=\"contact\" action=\"\" method=\"get\">\r\n                            <div class=\"row\">\r\n                                <div class=\"col-lg-6 col-md-12 col-sm-12\">\r\n                                    <fieldset>\r\n                                        <input name=\"name\" type=\"text\" class=\"form-control\" id=\"name\"\r\n                                               placeholder=\"Full Name\" required=\"\">\r\n                                    </fieldset>\r\n                                </div>\r\n                                <div class=\"col-lg-6 col-md-12 col-sm-12\">\r\n                                    <fieldset>\r\n                                        <input name=\"email\" type=\"email\" class=\"form-control\" id=\"email\"\r\n                                               placeholder=\"E-Mail Address\" required=\"\">\r\n                                    </fieldset>\r\n                                </div>\r\n                                <div class=\"col-lg-12\">\r\n                                    <fieldset>\r\n                                        <textarea name=\"message\" rows=\"6\" class=\"form-control\" id=\"message\"\r\n                                                  placeholder=\"Your Message\" required=\"\"></textarea>\r\n                                    </fieldset>\r\n                                </div>\r\n                                <div class=\"col-lg-12\">\r\n                                    <fieldset>\r\n                                        <button type=\"submit\" id=\"form-submit\" class=\"main-button\">Send Message</button>\r\n                                    </fieldset>\r\n                                </div>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n                <!-- ***** Contact Form End ***** -->\r\n            </div>\r\n        </div>\r\n    </section>\r\n    <!-- ***** Contact Us End ***** -->\r\n\r\n    <!-- ***** Footer Start ***** -->\r\n    <footer>\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12 col-md-12 col-sm-12\">\r\n                    <ul class=\"social\">\r\n                        <li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\r\n                        <li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\r\n                        <li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>\r\n                        <li><a href=\"#\"><i class=\"fa fa-rss\"></i></a></li>\r\n                        <li><a href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-lg-12\">\r\n                    <p class=\"copyright\">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </footer>\r\n\r\n\r\n    </body>\r\n    </html>\r\n\r\n\r\n{% endblock %}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/home_module/templates/home_module/index_page.html b/home_module/templates/home_module/index_page.html
+--- a/home_module/templates/home_module/index_page.html	
++++ b/home_module/templates/home_module/index_page.html	
+@@ -5,598 +5,621 @@
+ {% endblock %}
+ 
+ {% block content %}
+-    <style>
++<style>
+ 
+-    </style>
+-    <body>
++</style>
++<body>
+ 
+ 
+-    <!-- ***** Preloader Start ***** -->
+-    <div id="preloader">
++<!-- ***** Preloader Start ***** -->
++<div id="preloader">
+ 
+-        <div class="jumper">
+-            <div></div>
+-            <div></div>
+-            <div></div>
+-        </div>
+-    </div>
+-    <!-- ***** Preloader End ***** -->
++    <div class="jumper">
++        <div></div>
++        <div></div>
++        <div></div>
++    </div>
++</div>
++<!-- ***** Preloader End ***** -->
+ 
+ 
+-    <!-- ***** Welcome Area Start ***** -->
+-    <div class="welcome-area" id="welcome">
++<!-- ***** Welcome Area Start ***** -->
++<div class="welcome-area" id="welcome">
+ 
+-        <!-- ***** Header Text Start ***** -->
+-        <div class="header-text">
+-            <div class="container">
+-                <div class="row">
+-                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-md-12 col-sm-12">
+-                        <h1><strong>CgLancer</strong><br><strong></strong></h1>
+-                        {#                        <p>Softy Pinko is a professional Bootstrap 4.0 theme designed by Template Mo#}
+-                        {#                        for your company at absolutely free of charge</p>#}
+-                        {#                        <a href="#features" class="main-button-slider">Discover More</a>#}
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-        <!-- ***** Header Text End ***** -->
+-    </div>
+-    <!-- ***** Welcome Area End ***** -->
++    <!-- ***** Header Text Start ***** -->
++    <div class="header-text">
++        <div class="container">
++            <div class="row">
++                <div class="offset-xl-3 col-xl-6 offset-lg-2 col-md-12 col-sm-12">
++                    <h1><strong>CgLancer</strong><br><strong></strong></h1>
++                    <p><strong>From Imagination to Reality</strong></p>
++                    {# <a href="#features" class="main-button-slider">Discover More</a>#}
++                </div>
++            </div>
++        </div>
++    </div>
++    <!-- ***** Header Text End ***** -->
++</div>
++<!-- ***** Welcome Area End ***** -->
+ 
+-    <!-- ***** Features Small Start ***** -->
+-    <section class="section home-feature">
+-        <div class="container">
+-            <div class="row">
+-                <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+-                    <div class="categories">
+-                        <button class="category-btn active" data-filter="all">All</button>
+-                        <button class="category-btn" data-filter="nature">Lighting</button>
+-                        <button class="category-btn" data-filter="food">Ceramic</button>
+-                        <button class="category-btn" data-filter="pets">Furniture</button>
+-                    </div>
+-                    {# <a href="#features" class="main-button-slider">Discover More</a> #}
+-                </div>
+-            </div>
+-        </div>
+-        {% for gallery in gallery %}
+-        <div class="container">
+-            <div class="col-lg-12">
+-                <div class="gallery d-flex justify-content-center">
+-                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 item nature features-small-item fade-in">
+-                        <img src="{% static 'images/right-image.png' %}" class=" loading fade-in " alt="Nature 1">
+-                    </div>
+-                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 item food features-small-item fade-in ">
+-                        <img src="{% static 'images/left-image.png' %}" class="loading fade-in " alt="Food 1">
+-                    </div>
+-                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 item pets features-small-item fade-in ">
+-                        <img src="{% static 'images/right-image.png' %}" class="loading fade-in " alt="Pet 1">
+-                    </div>
+-                    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 item nature features-small-item fade-in">
+-                        <img src="{% static 'images/left-image.png' %}" class="loading fade-in" alt="Nature 2">
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-        {% endfor %}
+-    </section>
+-    <!-- ***** Features Small End ***** -->
++<!-- ***** Features Small Start ***** -->
++<section class="section home-feature">
++    <div class="container">
++        <div class="row">
++            <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
++                <div class="categories">
++                    <button class="category-btn active" data-filter="all">All</button>
++                    <button class="category-btn" data-filter="lighting">Lighting</button>
++                    <button class="category-btn" data-filter="ceramic">Ceramic</button>
++                    <button class="category-btn" data-filter="furniture">Furniture</button>
++                </div>
++                {# <a href="#features" class="main-button-slider">Discover More</a> #}
++            </div>
++        </div>
++    </div>
++
++    <div class="container">
++        <div class="col-lg-12">
++            <div class="gallery d-flex justify-content-center">
++                {% for gallery in gallery %}
++                <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 item {{gallery.category}} features-small-item fade-in">
++                    <img src="{{gallery.image.url}}" class=" loading fade-in " alt="{{gallery.title}}">
++                </div>
++                {% endfor %}
++            </div>
++        </div>
++    </div>
++
++</section>
++<!-- ***** Features Small End ***** -->
+ 
+-    <!-- ***** Features Big Item Start ***** -->
+-    <section class="section padding-top-70 padding-bottom-0" id="features">
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center"
+-                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+-                    <img src="{% static 'images/left-image.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+-                </div>
+-                <div class="col-lg-1"></div>
+-                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+-                    <div class="left-heading">
+-                        <h2 class="section-title">Let’s discuss about you project</h2>
+-                    </div>
+-                    <div class="left-text">
+-                        <p>Nullam sit amet purus libero. Etiam ullamcorper nisl ut augue blandit, at finibus leo
+-                            efficitur. Nam gravida purus non sapien auctor, ut aliquam magna ullamcorper.</p>
+-                    </div>
+-                </div>
+-            </div>
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="hr"></div>
+-                </div>
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Features Big Item End ***** -->
++<!-- ***** Features Big Item Start ***** -->
++<section class="section padding-top-70 padding-bottom-0" id="features">
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-5 col-md-12 col-sm-12 align-self-center"
++                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
++                <img src="{% static 'images/left-image.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
++            </div>
++            <div class="col-lg-1"></div>
++            <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
++                <div class="left-heading">
++                    <h2 class="section-title">Let’s discuss about us</h2>
++                </div>
++                <div class="left-text">
++                    <p style="text-align: justify;">If you want to work with a team that truly cares about your project
++                        and is committed to
++                        delivering outstanding results, choose us. Let us show you what sets you apart from the rest.
++                        Looking for a team of experts to bring your 3D modeling, lighting, rendering, animation, and VFX
++                        projects to life? Look no further! Our team boasts a wealth of experience and expertise in these
++                        fields, making us the perfect choice for anyone looking to work with the best in the business.
++                        Whether you're looking to create stunning visual effects or need high-quality 3D visualization
++                        for your next project, we've got you covered. So why wait? Contact us today and let's get
++                        started!</p>
++                </div>
++            </div>
++        </div>
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="hr"></div>
++            </div>
++        </div>
++    </div>
++</section>
++<!-- ***** Features Big Item End ***** -->
+ 
+-    <!-- ***** Features Big Item Start ***** -->
+-    <section class="section padding-bottom-100">
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+-                    <div class="left-heading">
+-                        <h2 class="section-title">We can help you to grow your business</h2>
+-                    </div>
+-                    <div class="left-text">
+-                        <p>Aenean pretium, ipsum et porttitor auctor, metus ipsum iaculis nisi, a bibendum lectus libero
+-                            vitae urna. Sed id leo eu dolor luctus congue sed eget ipsum. Nunc nec luctus libero. Etiam
+-                            quis dolor elit.</p>
+-                    </div>
+-                </div>
+-                <div class="col-lg-1"></div>
+-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
+-                     data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+-                    <img src="{% static 'images/right-image.png' %}" class="rounded img-fluid d-block mx-auto"
+-                         alt="App">
+-                </div>
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Features Big Item End ***** -->
++<!-- ***** Features Big Item Start ***** -->
++<section class="section padding-bottom-100">
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
++                <div class="left-heading">
++                    <h2 class="section-title">Let us describe the process of a project with us</h2>
++                </div>
++                <div class="left-text">
++                    <p style="text-align: justify;">
++                        First, by consulting with you, your needs and desires will be listed in your work area, and if
++                        possible, we will provide advice from our side.
++                        The second step is to present a concept of the architectural plan or a scenario of your desired
++                        animation.
++                        The third step is to start modeling according to the needs of your project. Models come to your
++                        approval during the execution.
++                        The fourth step (in animation projects) is to create a preview output. In these outputs, the
++                        quality is low and the materials are not displayed well. At this step, the work is technically
++                        approved by you.
++                        The fifth step will be a low-quality rendering to confirm the light and material. In animation
++                        projects, a rendering sample is provided from each sequence.
++                        The sixth step is the final approval by you and the start of the rendering process. This step is
++                        the point of no return and due to the high cost of the next steps, after approval, the previous
++                        steps will not be editable.
++                        The seventh step is the post-production process for the final output.
++                        After preparing the final output, a low-quality version will be delivered to you so that you can
++                        give us your writing in each part of the animation (Infographic). In single-frame renderings,
++                        you can provide the necessary information to be written on the work if necessary.</p>
++                </div>
++            </div>
++            <div class="col-lg-1"></div>
++            <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
++                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
++                <img src="{% static 'images/right-image.png' %}" class="rounded img-fluid d-block mx-auto"
++                     alt="App">
++            </div>
++        </div>
++    </div>
++</section>
++<!-- ***** Features Big Item End ***** -->
+ 
+-    <!-- ***** Home Parallax Start ***** -->
+-    <section class="mini" id="work-process">
+-        <div class="mini-content">
+-            <div class="container">
+-                <div class="row">
+-                    <div class="offset-lg-3 col-lg-6">
+-                        <div class="info">
+-                            <h1>Work Process</h1>
+-                            <p>Aenean nec tempor metus. Maecenas ligula dolor, commodo in imperdiet interdum, vehicula
+-                                ut ex. Donec ante diam.</p>
+-                        </div>
+-                    </div>
+-                </div>
++<!-- ***** Home Parallax Start ***** -->
++<section class="mini" id="work-process">
++    <div class="mini-content">
++        <div class="container">
++            <div class="row">
++                <div class="offset-lg-3 col-lg-6">
++                    <div class="info">
++                        <h1>Guarantee</h1>
++                        <p>To guarantee work, our payment process is in such a way that you bear the least sense of risk
++                            The first payment is only 10% of the project from you. This amount guarantees that you are
++                            serious about doing the project.
++                            The second stage of payment is before the final rendering and after seeing the previews and
++                            technical approval of the work from your side. Where about 80% of the project has
++                            progressed, and the project is ready for final output.
++                            The final 50% of the amount will be paid by you after the completion of the project and
++                            final approval.
++                            All our efforts in this process are to gain your trust in our quality and responsibility
++                            toward you.</p>
++                    </div>
++                </div>
++            </div>
+ 
+-                <!-- ***** Mini Box Start ***** -->
+-                <div class="row">
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Get Ideas</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Sketch Up</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Discuss</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Revise</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Approve</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+-                        <a href="#" class="mini-box">
+-                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
+-                            <strong>Launch</strong>
+-                            <span>Godard pabst prism fam cliche.</span>
+-                        </a>
+-                    </div>
+-                </div>
+-                <!-- ***** Mini Box End ***** -->
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Home Parallax End ***** -->
++            <!-- ***** Mini Box Start ***** -->
++<!--            <div class="row">-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Get Ideas</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Sketch Up</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Discuss</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Revise</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Approve</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--                <div class="col-lg-2 col-md-3 col-sm-6 col-6">-->
++<!--                    <a href="#" class="mini-box">-->
++<!--                        <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>-->
++<!--                        <strong>Launch</strong>-->
++<!--                        <span>Godard pabst prism fam cliche.</span>-->
++<!--                    </a>-->
++<!--                </div>-->
++<!--            </div>-->
++            <!-- ***** Mini Box End ***** -->
++        </div>
++    </div>
++</section>
++<!-- ***** Home Parallax End ***** -->
+ 
+-    <!-- ***** Testimonials Start ***** -->
+-    <section class="section" id="testimonials">
+-        <div class="container">
+-            <!-- ***** Section Title Start ***** -->
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="center-heading">
+-                        <h2 class="section-title">What do they say?</h2>
+-                    </div>
+-                </div>
+-                <div class="offset-lg-3 col-lg-6">
+-                    <div class="center-text">
+-                        <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a
+-                            turpis. Ut sagittis lectus libero.</p>
+-                    </div>
+-                </div>
+-            </div>
+-            <!-- ***** Section Title End ***** -->
++<!-- ***** Testimonials Start ***** -->
++<section class="section" id="testimonials">
++    <div class="container">
++        <!-- ***** Section Title Start ***** -->
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="center-heading">
++                    <h2 class="section-title">What do they say?</h2>
++                </div>
++            </div>
++            <div class="offset-lg-3 col-lg-6">
++                <div class="center-text">
++                    <p>Donec tempus, sem non rutrum imperdiet, lectus orci fringilla nulla, at accumsan elit eros a
++                        turpis. Ut sagittis lectus libero.</p>
++                </div>
++            </div>
++        </div>
++        <!-- ***** Section Title End ***** -->
+ 
+-            <div class="row">
+-                <!-- ***** Testimonials Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="team-item">
+-                        <div class="team-content">
+-                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
+-                            <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci.
+-                                Maecenas a finibus odio.</p>
+-                            <div class="user-image">
+-                                <img src="http://placehold.it/60x60" alt="">
+-                            </div>
+-                            <div class="team-info">
+-                                <h3 class="user-name">Catherine Soft</h3>
+-                                <span>Managing Director</span>
+-                            </div>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Testimonials Item End ***** -->
++        <div class="row">
++            <!-- ***** Testimonials Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="team-item">
++                    <div class="team-content">
++                        <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
++                        <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci.
++                            Maecenas a finibus odio.</p>
++                        <div class="user-image">
++                            <img src="http://placehold.it/60x60" alt="">
++                        </div>
++                        <div class="team-info">
++                            <h3 class="user-name">Catherine Soft</h3>
++                            <span>Managing Director</span>
++                        </div>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Testimonials Item End ***** -->
+ 
+-                <!-- ***** Testimonials Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="team-item">
+-                        <div class="team-content">
+-                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
+-                            <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae,
+-                                placerat nibh. Cras maximus venenatis molestie.</p>
+-                            <div class="user-image">
+-                                <img src="http://placehold.it/60x60" alt="">
+-                            </div>
+-                            <div class="team-info">
+-                                <h3 class="user-name">Kelvin Wood</h3>
+-                                <span>Digital Marketer</span>
+-                            </div>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Testimonials Item End ***** -->
++            <!-- ***** Testimonials Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="team-item">
++                    <div class="team-content">
++                        <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
++                        <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae,
++                            placerat nibh. Cras maximus venenatis molestie.</p>
++                        <div class="user-image">
++                            <img src="http://placehold.it/60x60" alt="">
++                        </div>
++                        <div class="team-info">
++                            <h3 class="user-name">Kelvin Wood</h3>
++                            <span>Digital Marketer</span>
++                        </div>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Testimonials Item End ***** -->
+ 
+-                <!-- ***** Testimonials Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="team-item">
+-                        <div class="team-content">
+-                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
+-                            <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante
+-                                ultrices molestie. Ut vehicula et diam at aliquam.</p>
+-                            <div class="user-image">
+-                                <img src="http://placehold.it/60x60" alt="">
+-                            </div>
+-                            <div class="team-info">
+-                                <h3 class="user-name">David Martin</h3>
+-                                <span>Website Manager</span>
+-                            </div>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Testimonials Item End ***** -->
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Testimonials End ***** -->
++            <!-- ***** Testimonials Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="team-item">
++                    <div class="team-content">
++                        <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
++                        <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante
++                            ultrices molestie. Ut vehicula et diam at aliquam.</p>
++                        <div class="user-image">
++                            <img src="http://placehold.it/60x60" alt="">
++                        </div>
++                        <div class="team-info">
++                            <h3 class="user-name">David Martin</h3>
++                            <span>Website Manager</span>
++                        </div>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Testimonials Item End ***** -->
++        </div>
++    </div>
++</section>
++<!-- ***** Testimonials End ***** -->
+ 
+-    <!-- ***** Pricing Plans Start ***** -->
+-    <section class="section colored" id="pricing-plans">
+-        <div class="container">
+-            <!-- ***** Section Title Start ***** -->
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="center-heading">
+-                        <h2 class="section-title">Pricing Plans</h2>
+-                    </div>
+-                </div>
+-                <div class="offset-lg-3 col-lg-6">
+-                    <div class="center-text">
+-                        <p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis
+-                            congue risus volutpat.</p>
+-                    </div>
+-                </div>
+-            </div>
+-            <!-- ***** Section Title End ***** -->
++<!-- ***** Pricing Plans Start ***** -->
++<section class="section colored" id="pricing-plans">
++    <div class="container">
++        <!-- ***** Section Title Start ***** -->
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="center-heading">
++                    <h2 class="section-title">Pricing Plans</h2>
++                </div>
++            </div>
++            <div class="offset-lg-3 col-lg-6">
++                <div class="center-text">
++                    <p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis
++                        congue risus volutpat.</p>
++                </div>
++            </div>
++        </div>
++        <!-- ***** Section Title End ***** -->
+ 
+-            <div class="row">
+-                <!-- ***** Pricing Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12"
+-                     data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+-                    <div class="pricing-item">
+-                        <div class="pricing-header">
+-                            <h3 class="pricing-title">Starter</h3>
+-                        </div>
+-                        <div class="pricing-body">
+-                            <div class="price-wrapper">
+-                                <span class="currency">$</span>
+-                                <span class="price">14.50</span>
+-                                <span class="period">monthly</span>
+-                            </div>
+-                            <ul class="list">
+-                                <li class="active">60 GB space</li>
+-                                <li class="active">600 GB transfer</li>
+-                                <li class="active">Pro Design Panel</li>
+-                                <li>15-minute support</li>
+-                                <li>Unlimited Emails</li>
+-                                <li>24/7 Security</li>
+-                            </ul>
+-                        </div>
+-                        <div class="pricing-footer">
+-                            <a href="#" class="main-button">Purchase Now</a>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Pricing Item End ***** -->
++        <div class="row">
++            <!-- ***** Pricing Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12"
++                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
++                <div class="pricing-item">
++                    <div class="pricing-header">
++                        <h3 class="pricing-title">Starter</h3>
++                    </div>
++                    <div class="pricing-body">
++                        <div class="price-wrapper">
++                            <span class="currency">$</span>
++                            <span class="price">14.50</span>
++                            <span class="period">monthly</span>
++                        </div>
++                        <ul class="list">
++                            <li class="active">60 GB space</li>
++                            <li class="active">600 GB transfer</li>
++                            <li class="active">Pro Design Panel</li>
++                            <li>15-minute support</li>
++                            <li>Unlimited Emails</li>
++                            <li>24/7 Security</li>
++                        </ul>
++                    </div>
++                    <div class="pricing-footer">
++                        <a href="#" class="main-button">Purchase Now</a>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Pricing Item End ***** -->
+ 
+-                <!-- ***** Pricing Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12"
+-                     data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+-                    <div class="pricing-item active">
+-                        <div class="pricing-header">
+-                            <h3 class="pricing-title">Premium</h3>
+-                        </div>
+-                        <div class="pricing-body">
+-                            <div class="price-wrapper">
+-                                <span class="currency">$</span>
+-                                <span class="price">21.50</span>
+-                                <span class="period">monthly</span>
+-                            </div>
+-                            <ul class="list">
+-                                <li class="active">120 GB space</li>
+-                                <li class="active">1200 GB transfer</li>
+-                                <li class="active">Pro Design Panel</li>
+-                                <li class="active">15-minute support</li>
+-                                <li>Unlimited Emails</li>
+-                                <li>24/7 Security</li>
+-                            </ul>
+-                        </div>
+-                        <div class="pricing-footer">
+-                            <a href="#" class="main-button">Purchase Now</a>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Pricing Item End ***** -->
++            <!-- ***** Pricing Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12"
++                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
++                <div class="pricing-item active">
++                    <div class="pricing-header">
++                        <h3 class="pricing-title">Premium</h3>
++                    </div>
++                    <div class="pricing-body">
++                        <div class="price-wrapper">
++                            <span class="currency">$</span>
++                            <span class="price">21.50</span>
++                            <span class="period">monthly</span>
++                        </div>
++                        <ul class="list">
++                            <li class="active">120 GB space</li>
++                            <li class="active">1200 GB transfer</li>
++                            <li class="active">Pro Design Panel</li>
++                            <li class="active">15-minute support</li>
++                            <li>Unlimited Emails</li>
++                            <li>24/7 Security</li>
++                        </ul>
++                    </div>
++                    <div class="pricing-footer">
++                        <a href="#" class="main-button">Purchase Now</a>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Pricing Item End ***** -->
+ 
+-                <!-- ***** Pricing Item Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12"
+-                     data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+-                    <div class="pricing-item">
+-                        <div class="pricing-header">
+-                            <h3 class="pricing-title">Advanced</h3>
+-                        </div>
+-                        <div class="pricing-body">
+-                            <div class="price-wrapper">
+-                                <span class="currency">$</span>
+-                                <span class="price">42.00</span>
+-                                <span class="period">monthly</span>
+-                            </div>
+-                            <ul class="list">
+-                                <li class="active">250 GB space</li>
+-                                <li class="active">5000 GB transfer</li>
+-                                <li class="active">Pro Design Panel</li>
+-                                <li class="active">15-minute support</li>
+-                                <li class="active">Unlimited Emails</li>
+-                                <li class="active">24/7 Security</li>
+-                            </ul>
+-                        </div>
+-                        <div class="pricing-footer">
+-                            <a href="#" class="main-button">Purchase Now</a>
+-                        </div>
+-                    </div>
+-                </div>
+-                <!-- ***** Pricing Item End ***** -->
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Pricing Plans End ***** -->
++            <!-- ***** Pricing Item Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12"
++                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
++                <div class="pricing-item">
++                    <div class="pricing-header">
++                        <h3 class="pricing-title">Advanced</h3>
++                    </div>
++                    <div class="pricing-body">
++                        <div class="price-wrapper">
++                            <span class="currency">$</span>
++                            <span class="price">42.00</span>
++                            <span class="period">monthly</span>
++                        </div>
++                        <ul class="list">
++                            <li class="active">250 GB space</li>
++                            <li class="active">5000 GB transfer</li>
++                            <li class="active">Pro Design Panel</li>
++                            <li class="active">15-minute support</li>
++                            <li class="active">Unlimited Emails</li>
++                            <li class="active">24/7 Security</li>
++                        </ul>
++                    </div>
++                    <div class="pricing-footer">
++                        <a href="#" class="main-button">Purchase Now</a>
++                    </div>
++                </div>
++            </div>
++            <!-- ***** Pricing Item End ***** -->
++        </div>
++    </div>
++</section>
++<!-- ***** Pricing Plans End ***** -->
+ 
+-    <!-- ***** Counter Parallax Start ***** -->
+-    <section class="counter">
+-        <div class="content">
+-            <div class="container">
+-                <div class="row">
+-                    <div class="col-lg-3 col-md-6 col-sm-12">
+-                        <div class="count-item decoration-bottom">
+-                            <strong>126</strong>
+-                            <span>Projects</span>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-3 col-md-6 col-sm-12">
+-                        <div class="count-item decoration-top">
+-                            <strong>63</strong>
+-                            <span>Happy Clients</span>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-3 col-md-6 col-sm-12">
+-                        <div class="count-item decoration-bottom">
+-                            <strong>18</strong>
+-                            <span>Awards Wins</span>
+-                        </div>
+-                    </div>
+-                    <div class="col-lg-3 col-md-6 col-sm-12">
+-                        <div class="count-item">
+-                            <strong>27</strong>
+-                            <span>Countries</span>
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Counter Parallax End ***** -->
++<!-- ***** Counter Parallax Start ***** -->
++<section class="counter">
++    <div class="content">
++        <div class="container">
++            <div class="row">
++                <div class="col-lg-3 col-md-6 col-sm-12">
++                    <div class="count-item decoration-bottom">
++                        <strong>126</strong>
++                        <span>Projects</span>
++                    </div>
++                </div>
++                <div class="col-lg-3 col-md-6 col-sm-12">
++                    <div class="count-item decoration-top">
++                        <strong>63</strong>
++                        <span>Happy Clients</span>
++                    </div>
++                </div>
++                <div class="col-lg-3 col-md-6 col-sm-12">
++                    <div class="count-item decoration-bottom">
++                        <strong>18</strong>
++                        <span>Awards Wins</span>
++                    </div>
++                </div>
++                <div class="col-lg-3 col-md-6 col-sm-12">
++                    <div class="count-item">
++                        <strong>27</strong>
++                        <span>Countries</span>
++                    </div>
++                </div>
++            </div>
++        </div>
++    </div>
++</section>
++<!-- ***** Counter Parallax End ***** -->
+ 
+-    <!-- ***** Blog Start ***** -->
+-    <section class="section" id="blog">
+-        <div class="container">
+-            <!-- ***** Section Title Start ***** -->
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="center-heading">
+-                        <h2 class="section-title">Blog Entries</h2>
+-                    </div>
+-                </div>
+-                <div class="offset-lg-3 col-lg-6">
+-                    <div class="center-text">
+-                        <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat
+-                            nibh. Cras maximus venenatis molestie.</p>
+-                    </div>
+-                </div>
+-            </div>
+-            <!-- ***** Section Title End ***** -->
++<!-- ***** Blog Start ***** -->
++<section class="section" id="blog">
++    <div class="container">
++        <!-- ***** Section Title Start ***** -->
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="center-heading">
++                    <h2 class="section-title">Blog Entries</h2>
++                </div>
++            </div>
++            <div class="offset-lg-3 col-lg-6">
++                <div class="center-text">
++                    <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat
++                        nibh. Cras maximus venenatis molestie.</p>
++                </div>
++            </div>
++        </div>
++        <!-- ***** Section Title End ***** -->
+ 
+-            <div class="row">
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="blog-post-thumb">
+-                        <div class="img">
+-                            <img src="{% static 'images/blog-item-01.png' %}" alt="">
+-                        </div>
+-                        <div class="blog-content">
+-                            <h3>
+-                                <a href="#">Vivamus ac vehicula dui</a>
+-                            </h3>
+-                            <div class="text">
+-                                Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc.
+-                                Nulla in sagittis eros. Aliquam egestas augue.
+-                            </div>
+-                            <a href="#" class="main-button">Read More</a>
+-                        </div>
+-                    </div>
+-                </div>
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="blog-post-thumb">
+-                        <div class="img">
+-                            <img src="{% static 'images/blog-item-02.png' %}" alt="">
+-                        </div>
+-                        <div class="blog-content">
+-                            <h3>
+-                                <a href="#">Phasellus convallis augue</a>
+-                            </h3>
+-                            <div class="text">
+-                                Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna
+-                                ut velit venenatis, vel ultrices sapien mattis.
+-                            </div>
+-                            <a href="#" class="main-button">Read More</a>
+-                        </div>
+-                    </div>
+-                </div>
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <div class="blog-post-thumb">
+-                        <div class="img">
+-                            <img src="{% static 'images/blog-item-03.png' %}" alt="">
+-                        </div>
+-                        <div class="blog-content">
+-                            <h3>
+-                                <a href="#">Nam gravida purus non</a>
+-                            </h3>
+-                            <div class="text">
+-                                Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus
+-                                euismod odio, ut tempus enim varius eu.
+-                            </div>
+-                            <a href="#" class="main-button">Read More</a>
+-                        </div>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Blog End ***** -->
++        <div class="row">
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="blog-post-thumb">
++                    <div class="img">
++                        <img src="{% static 'images/blog-item-01.png' %}" alt="">
++                    </div>
++                    <div class="blog-content">
++                        <h3>
++                            <a href="#">Vivamus ac vehicula dui</a>
++                        </h3>
++                        <div class="text">
++                            Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc.
++                            Nulla in sagittis eros. Aliquam egestas augue.
++                        </div>
++                        <a href="#" class="main-button">Read More</a>
++                    </div>
++                </div>
++            </div>
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="blog-post-thumb">
++                    <div class="img">
++                        <img src="{% static 'images/blog-item-02.png' %}" alt="">
++                    </div>
++                    <div class="blog-content">
++                        <h3>
++                            <a href="#">Phasellus convallis augue</a>
++                        </h3>
++                        <div class="text">
++                            Aliquam commodo ornare nisl, et scelerisque nisl dignissim ac. Vestibulum finibus urna
++                            ut velit venenatis, vel ultrices sapien mattis.
++                        </div>
++                        <a href="#" class="main-button">Read More</a>
++                    </div>
++                </div>
++            </div>
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <div class="blog-post-thumb">
++                    <div class="img">
++                        <img src="{% static 'images/blog-item-03.png' %}" alt="">
++                    </div>
++                    <div class="blog-content">
++                        <h3>
++                            <a href="#">Nam gravida purus non</a>
++                        </h3>
++                        <div class="text">
++                            Maecenas eu erat vitae dui convallis consequat vel gravida nulla. Vestibulum finibus
++                            euismod odio, ut tempus enim varius eu.
++                        </div>
++                        <a href="#" class="main-button">Read More</a>
++                    </div>
++                </div>
++            </div>
++        </div>
++    </div>
++</section>
++<!-- ***** Blog End ***** -->
+ 
+-    <!-- ***** Contact Us Start ***** -->
+-    <section class="section colored" id="contact-us">
+-        <div class="container">
+-            <!-- ***** Section Title Start ***** -->
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <div class="center-heading">
+-                        <h2 class="section-title">Talk To Us</h2>
+-                    </div>
+-                </div>
+-                <div class="offset-lg-3 col-lg-6">
+-                    <div class="center-text">
+-                        <p>Maecenas pellentesque ante faucibus lectus vulputate sollicitudin. Cras feugiat hendrerit
+-                            semper.</p>
+-                    </div>
+-                </div>
+-            </div>
+-            <!-- ***** Section Title End ***** -->
++<!-- ***** Contact Us Start ***** -->
++<section class="section colored" id="contact-us">
++    <div class="container">
++        <!-- ***** Section Title Start ***** -->
++        <div class="row">
++            <div class="col-lg-12">
++                <div class="center-heading">
++                    <h2 class="section-title">Talk To Us</h2>
++                </div>
++            </div>
++            <div class="offset-lg-3 col-lg-6">
++                <div class="center-text">
++                    <p>Maecenas pellentesque ante faucibus lectus vulputate sollicitudin. Cras feugiat hendrerit
++                        semper.</p>
++                </div>
++            </div>
++        </div>
++        <!-- ***** Section Title End ***** -->
+ 
+-            <div class="row">
+-                <!-- ***** Contact Text Start ***** -->
+-                <div class="col-lg-4 col-md-6 col-sm-12">
+-                    <h5 class="margin-bottom-30">Keep in touch</h5>
+-                    <div class="contact-text">
+-                        <p>110-220 Quisque diam odio, maximus ac consectetur eu, 10260
+-                            <br>auctor non lorem</p>
+-                        <p>You are NOT allowed to re-distribute Softy Pinko template on any template collection
+-                            websites. Thank you.</p>
+-                    </div>
+-                </div>
+-                <!-- ***** Contact Text End ***** -->
++        <div class="row">
++            <!-- ***** Contact Text Start ***** -->
++            <div class="col-lg-4 col-md-6 col-sm-12">
++                <h5 class="margin-bottom-30">Keep in touch</h5>
++                <div class="contact-text">
++                    <p>110-220 Quisque diam odio, maximus ac consectetur eu, 10260
++                        <br>auctor non lorem</p>
++                    <p>You are NOT allowed to re-distribute Softy Pinko template on any template collection
++                        websites. Thank you.</p>
++                </div>
++            </div>
++            <!-- ***** Contact Text End ***** -->
+ 
+-                <!-- ***** Contact Form Start ***** -->
+-                <div class="col-lg-8 col-md-6 col-sm-12">
+-                    <div class="contact-form">
+-                        <form id="contact" action="" method="get">
+-                            <div class="row">
+-                                <div class="col-lg-6 col-md-12 col-sm-12">
+-                                    <fieldset>
+-                                        <input name="name" type="text" class="form-control" id="name"
+-                                               placeholder="Full Name" required="">
+-                                    </fieldset>
+-                                </div>
+-                                <div class="col-lg-6 col-md-12 col-sm-12">
+-                                    <fieldset>
+-                                        <input name="email" type="email" class="form-control" id="email"
+-                                               placeholder="E-Mail Address" required="">
+-                                    </fieldset>
+-                                </div>
+-                                <div class="col-lg-12">
+-                                    <fieldset>
++            <!-- ***** Contact Form Start ***** -->
++            <div class="col-lg-8 col-md-6 col-sm-12">
++                <div class="contact-form">
++                    <form id="contact" action="" method="get">
++                        <div class="row">
++                            <div class="col-lg-6 col-md-12 col-sm-12">
++                                <fieldset>
++                                    <input name="name" type="text" class="form-control" id="name"
++                                           placeholder="Full Name" required="">
++                                </fieldset>
++                            </div>
++                            <div class="col-lg-6 col-md-12 col-sm-12">
++                                <fieldset>
++                                    <input name="email" type="email" class="form-control" id="email"
++                                           placeholder="E-Mail Address" required="">
++                                </fieldset>
++                            </div>
++                            <div class="col-lg-12">
++                                <fieldset>
+                                         <textarea name="message" rows="6" class="form-control" id="message"
+                                                   placeholder="Your Message" required=""></textarea>
+-                                    </fieldset>
+-                                </div>
+-                                <div class="col-lg-12">
+-                                    <fieldset>
+-                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
+-                                    </fieldset>
+-                                </div>
+-                            </div>
+-                        </form>
+-                    </div>
+-                </div>
+-                <!-- ***** Contact Form End ***** -->
+-            </div>
+-        </div>
+-    </section>
+-    <!-- ***** Contact Us End ***** -->
++                                </fieldset>
++                            </div>
++                            <div class="col-lg-12">
++                                <fieldset>
++                                    <button type="submit" id="form-submit" class="main-button">Send Message</button>
++                                </fieldset>
++                            </div>
++                        </div>
++                    </form>
++                </div>
++            </div>
++            <!-- ***** Contact Form End ***** -->
++        </div>
++    </div>
++</section>
++<!-- ***** Contact Us End ***** -->
+ 
+-    <!-- ***** Footer Start ***** -->
+-    <footer>
+-        <div class="container">
+-            <div class="row">
+-                <div class="col-lg-12 col-md-12 col-sm-12">
+-                    <ul class="social">
+-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+-                    </ul>
+-                </div>
+-            </div>
+-            <div class="row">
+-                <div class="col-lg-12">
+-                    <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>
+-                </div>
+-            </div>
+-        </div>
+-    </footer>
++<!-- ***** Footer Start ***** -->
++<footer>
++    <div class="container">
++        <div class="row">
++            <div class="col-lg-12 col-md-12 col-sm-12">
++                <ul class="social">
++                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
++                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
++                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
++                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
++                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
++                </ul>
++            </div>
++        </div>
++        <div class="row">
++            <div class="col-lg-12">
++                <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>
++            </div>
++        </div>
++    </div>
++</footer>
+ 
+ 
+-    </body>
+-    </html>
++</body>
++</html>
+ 
+ 
+ {% endblock %}
+Index: home_module/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.shortcuts import render\r\n\r\nfrom django.views.generic.base import TemplateView\r\n\r\nfrom site_module.models import SiteSetting, FooterLinkBox, Gallery\r\n\r\n\r\nclass HomeView(TemplateView):\r\n    template_name = 'home_module/index_page.html'\r\n\r\n    def get_context_data(self, **kwargs):\r\n        context = super().get_context_data(**kwargs)\r\n        gallery = Gallery.objects.filter(is_active=True)\r\n        context['gallery'] = gallery\r\n        return context\r\n\r\n\r\n\r\n\r\ndef site_header_component(request):\r\n    setting: SiteSetting = SiteSetting.objects.filter(is_main_setting=True).first()\r\n    context = {\r\n        'site_setting': setting\r\n    }\r\n    return render(request, 'shared/site_header_component.html', context)\r\n\r\n\r\ndef site_footer_component(request):\r\n    setting: SiteSetting = SiteSetting.objects.filter(is_main_setting=True).first()\r\n    footer_link_boxes = FooterLinkBox.objects.all()\r\n    for item in footer_link_boxes:\r\n        item.footerlink_set\r\n    context = {\r\n        'site_setting': setting,\r\n        'footer_link_boxes': footer_link_boxes\r\n    }\r\n    return render(request, 'shared/site_footer_component.html', context)\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/home_module/views.py b/home_module/views.py
+--- a/home_module/views.py	
++++ b/home_module/views.py	
+@@ -2,7 +2,7 @@
+ 
+ from django.views.generic.base import TemplateView
+ 
+-from site_module.models import SiteSetting, FooterLinkBox, Gallery
++from site_module.models import SiteSetting, FooterLinkBox, GalleryPhoto
+ 
+ 
+ class HomeView(TemplateView):
+@@ -10,7 +10,7 @@
+ 
+     def get_context_data(self, **kwargs):
+         context = super().get_context_data(**kwargs)
+-        gallery = Gallery.objects.filter(is_active=True)
++        gallery = GalleryPhoto.objects.all()
+         context['gallery'] = gallery
+         return context
+ 
+Index: site_module/admin.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.contrib import admin\r\nfrom . import models\r\n\r\n\r\nclass FooterLinkAdmin(admin.ModelAdmin):\r\n    list_display = ['title', 'url']\r\n\r\n\r\nclass GalleryAdmin(admin.ModelAdmin):\r\n    list_display = ['title', 'url', 'is_active']\r\n    list_editable = ['url', 'is_active']\r\n\r\n\r\nadmin.site.register(models.SiteSetting)\r\nadmin.site.register(models.FooterLinkBox)\r\nadmin.site.register(models.FooterLink, FooterLinkAdmin)\r\nadmin.site.register(models.Gallery, GalleryAdmin)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/site_module/admin.py b/site_module/admin.py
+--- a/site_module/admin.py	
++++ b/site_module/admin.py	
+@@ -7,11 +7,11 @@
+ 
+ 
+ class GalleryAdmin(admin.ModelAdmin):
+-    list_display = ['title', 'url', 'is_active']
+-    list_editable = ['url', 'is_active']
++    list_display = ['title']
+ 
+ 
++
++admin.site.register(models.GalleryPhoto, GalleryAdmin)
+ admin.site.register(models.SiteSetting)
+ admin.site.register(models.FooterLinkBox)
+ admin.site.register(models.FooterLink, FooterLinkAdmin)
+-admin.site.register(models.Gallery, GalleryAdmin)
+Index: site_module/models.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.db import models\r\n\r\n\r\n# Create your models here.\r\n\r\nclass SiteSetting(models.Model):\r\n    site_name = models.CharField(max_length=200, verbose_name='نام سایت')\r\n    site_url = models.CharField(max_length=200, verbose_name='دامنه سایت')\r\n    address = models.CharField(max_length=200, verbose_name='آدرس')\r\n    phone = models.CharField(max_length=200, null=True, blank=True, verbose_name='تلفن')\r\n    fax = models.CharField(max_length=200, null=True, blank=True, verbose_name='فکس')\r\n    email = models.CharField(max_length=200, null=True, blank=True, verbose_name='ایمیل')\r\n    copy_right = models.TextField(verbose_name='متن کپی رایت سایت')\r\n    about_us_text = models.TextField(verbose_name='متن درباره ما سایت')\r\n    site_logo = models.ImageField(upload_to='images/site-setting/', verbose_name='لوگو سایت')\r\n    is_main_setting = models.BooleanField(verbose_name='تنظیمات اصلی')\r\n\r\n    class Meta:\r\n        verbose_name = 'تنظیمات سایت'\r\n        verbose_name_plural = 'تنظیمات'\r\n\r\n    def __str__(self):\r\n        return self.site_name\r\n\r\n\r\nclass FooterLinkBox(models.Model):\r\n    title = models.CharField(max_length=200, verbose_name='عنوان')\r\n\r\n    class Meta:\r\n        verbose_name = 'دسته بندی لینک های فوتر'\r\n        verbose_name_plural = 'دسته بندی های لینک های فوتر'\r\n\r\n    def __str__(self):\r\n        return self.title\r\n\r\n\r\nclass FooterLink(models.Model):\r\n    title = models.CharField(max_length=200, verbose_name='عنوان')\r\n    url = models.URLField(max_length=500, verbose_name='لینک')\r\n    footer_link_box = models.ForeignKey(to=FooterLinkBox, on_delete=models.CASCADE, verbose_name='دسته بندی')\r\n\r\n    class Meta:\r\n        verbose_name = 'لینک فوتر'\r\n        verbose_name_plural = 'لینک های فوتر'\r\n\r\n    def __str__(self):\r\n        return self.title\r\n\r\n\r\nclass Gallery(models.Model):\r\n    title = models.CharField(max_length=200, verbose_name='عنوان')\r\n    url = models.URLField(max_length=500, verbose_name='لینک', null=True, blank=True)\r\n    url_title = models.CharField(max_length=200, verbose_name='عنوان لینک', null=True, blank=True)\r\n    description = models.TextField(verbose_name='توضیحات اسلایدر')\r\n    image = models.ImageField(upload_to='images/sliders', verbose_name='تصویر اسلایدر', null=True, blank=True)\r\n    is_active = models.BooleanField(default=True, verbose_name='فعال / غیرفعال')\r\n\r\n    class Meta:\r\n        verbose_name = 'گالری'\r\n        verbose_name_plural = 'گالری'\r\n\r\n    def __str__(self):\r\n        return self.title\r\n\r\nclass ImageCategory(models.Model):\r\n    title = models.CharField(max_length=300, db_index=True, verbose_name='عنوان')\r\n    is_active = models.BooleanField(verbose_name='فعال / غیرفعال')\r\n    is_delete = models.BooleanField(verbose_name='حذف شده / نشده')\r\n\r\n    def __str__(self):\r\n        return f'( {self.title} )'\r\n\r\n    class Meta:\r\n        verbose_name = 'دسته بندی'\r\n        verbose_name_plural = 'دسته بندی ها'
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/site_module/models.py b/site_module/models.py
+--- a/site_module/models.py	
++++ b/site_module/models.py	
+@@ -47,29 +47,11 @@
+         return self.title
+ 
+ 
+-class Gallery(models.Model):
+-    title = models.CharField(max_length=200, verbose_name='عنوان')
+-    url = models.URLField(max_length=500, verbose_name='لینک', null=True, blank=True)
+-    url_title = models.CharField(max_length=200, verbose_name='عنوان لینک', null=True, blank=True)
+-    description = models.TextField(verbose_name='توضیحات اسلایدر')
+-    image = models.ImageField(upload_to='images/sliders', verbose_name='تصویر اسلایدر', null=True, blank=True)
+-    is_active = models.BooleanField(default=True, verbose_name='فعال / غیرفعال')
++class GalleryPhoto(models.Model):
++    title = models.CharField(max_length=255)
++    image = models.ImageField(upload_to='images/gallery/')
++    category = models.CharField(max_length=255)
+ 
+     class Meta:
+         verbose_name = 'گالری'
+-        verbose_name_plural = 'گالری'
+-
+-    def __str__(self):
+-        return self.title
+-
+-class ImageCategory(models.Model):
+-    title = models.CharField(max_length=300, db_index=True, verbose_name='عنوان')
+-    is_active = models.BooleanField(verbose_name='فعال / غیرفعال')
+-    is_delete = models.BooleanField(verbose_name='حذف شده / نشده')
+-
+-    def __str__(self):
+-        return f'( {self.title} )'
+-
+-    class Meta:
+-        verbose_name = 'دسته بندی'
+-        verbose_name_plural = 'دسته بندی ها'
+\ No newline at end of file
++        verbose_name_plural = 'گالری'
+\ No newline at end of file
+Index: eshop_project/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nDjango settings for eshop_project project.\r\n\r\nGenerated by 'django-admin startproject' using Django 3.2.7.\r\n\r\nFor more information on this file, see\r\nhttps://docs.djangoproject.com/en/3.2/topics/settings/\r\n\r\nFor the full list of settings and their values, see\r\nhttps://docs.djangoproject.com/en/3.2/ref/settings/\r\n\"\"\"\r\n\r\nfrom pathlib import Path\r\n\r\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\r\nfrom matplotlib.image import thumbnail\r\n\r\nBASE_DIR = Path(__file__).resolve().parent.parent\r\n\r\n# Quick-start development settings - unsuitable for production\r\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\r\n\r\n# SECURITY WARNING: keep the secret key used in production secret!\r\nSECRET_KEY = 'django-insecure-9qts1=s)$ky8o%%_$_#j#dmb106oas2_-n6shcfp$yg2g@uxny'\r\n\r\n# SECURITY WARNING: don't run with debug turned on in production!\r\nDEBUG = True\r\n\r\nALLOWED_HOSTS = []\r\n\r\n# Application definition\r\n\r\nINSTALLED_APPS = [\r\n    'django.contrib.admin',\r\n    'django.contrib.auth',\r\n    'django.contrib.contenttypes',\r\n    'django.contrib.sessions',\r\n    'django.contrib.messages',\r\n    'django.contrib.staticfiles',\r\n\r\n    # internal apps\r\n    'account_module',\r\n    'home_module',\r\n    'site_module',\r\n    # external apps\r\n    'django_render_partial',\r\n    'sorl.thumbnail',\r\n    'jalali_date',\r\n    'form_module',\r\n]\r\n\r\nMIDDLEWARE = [\r\n    'django.middleware.security.SecurityMiddleware',\r\n    'django.contrib.sessions.middleware.SessionMiddleware',\r\n    'django.middleware.common.CommonMiddleware',\r\n    'django.middleware.csrf.CsrfViewMiddleware',\r\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\r\n    'django.contrib.messages.middleware.MessageMiddleware',\r\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\r\n]\r\n\r\nROOT_URLCONF = 'eshop_project.urls'\r\n\r\nTEMPLATES = [\r\n    {\r\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\r\n        'DIRS': [BASE_DIR / 'templates'],\r\n        'APP_DIRS': True,\r\n        'OPTIONS': {\r\n            'context_processors': [\r\n                'django.template.context_processors.debug',\r\n                'django.template.context_processors.request',\r\n                'django.contrib.auth.context_processors.auth',\r\n                'django.contrib.messages.context_processors.messages',\r\n            ],\r\n        },\r\n    },\r\n]\r\n\r\nWSGI_APPLICATION = 'eshop_project.wsgi.application'\r\n\r\n# Database\r\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\r\n\r\nAUTH_USER_MODEL = 'account_module.User'\r\n\r\nDATABASES = {\r\n    'default': {\r\n        'ENGINE': 'django.db.backends.sqlite3',\r\n        'NAME': BASE_DIR / 'db.sqlite3',\r\n    }\r\n}\r\n\r\n# Password validation\r\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\r\n\r\nAUTH_PASSWORD_VALIDATORS = [\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\r\n    },\r\n    {\r\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\r\n    },\r\n]\r\n\r\n# Internationalization\r\n# https://docs.djangoproject.com/en/3.2/topics/i18n/\r\n\r\nLANGUAGE_CODE = 'fa-IR'\r\n\r\nTIME_ZONE = 'UTC'\r\n\r\nUSE_I18N = True\r\n\r\nUSE_L10N = True\r\n\r\nUSE_TZ = True\r\n\r\n# Static files (CSS, JavaScript, Images)\r\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\r\n\r\nSTATIC_URL = '/static/'\r\n\r\nMEDIA_ROOT = BASE_DIR / 'uploads'\r\nMEDIA_URL = '/medias/'\r\n\r\nSTATICFILES_DIRS = [\r\n    BASE_DIR / 'static'\r\n]\r\n\r\n# Default primary key field type\r\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\r\n\r\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\r\n\r\n# SESSION_COOKIE_AGE = 120\r\n\r\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\r\nEMAIL_USE_TLS = True\r\nEMAIL_HOST = 'smtp.gmail.com'\r\nEMAIL_HOST_USER = 'onionarchitecturemvc@gmail.com'\r\nEMAIL_HOST_PASSWORD = 'djangotoplearn@pass'\r\nEMAIL_PORT = 587\r\n\r\n# default settings\r\nJALALI_DATE_DEFAULTS = {\r\n    'Strftime': {\r\n        'date': '%y/%m/%d',\r\n        'datetime': '%H:%M:%S _ %y/%m/%d',\r\n    },\r\n    'Static': {\r\n        'js': [\r\n            # loading datepicker\r\n            'admin/js/django_jalali.min.js',\r\n            # OR\r\n            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.core.js',\r\n            # 'admin/jquery.ui.datepicker.jalali/scripts/calendar.js',\r\n            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc.js',\r\n            # 'admin/jquery.ui.datepicker.jalali/scripts/jquery.ui.datepicker-cc-fa.js',\r\n            # 'admin/js/main.js',\r\n        ],\r\n        'css': {\r\n            'all': [\r\n                'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css',\r\n            ]\r\n        }\r\n    },\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/eshop_project/settings.py b/eshop_project/settings.py
+--- a/eshop_project/settings.py	
++++ b/eshop_project/settings.py	
+@@ -9,7 +9,7 @@
+ For the full list of settings and their values, see
+ https://docs.djangoproject.com/en/3.2/ref/settings/
+ """
+-
++import os
+ from pathlib import Path
+ 
+ # Build paths inside the project like this: BASE_DIR / 'subdir'.
+@@ -126,12 +126,12 @@
+ # https://docs.djangoproject.com/en/3.2/howto/static-files/
+ 
+ STATIC_URL = '/static/'
+-
++STATIC_ROOT = 'statics'
+ MEDIA_ROOT = BASE_DIR / 'uploads'
+-MEDIA_URL = '/medias/'
++MEDIA_URL = '/media/'
+ 
+ STATICFILES_DIRS = [
+-    BASE_DIR / 'static'
++    os.path.join(BASE_DIR / 'static'),
+ ]
+ 
+ # Default primary key field type
+@@ -141,12 +141,6 @@
+ 
+ # SESSION_COOKIE_AGE = 120
+ 
+-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+-EMAIL_USE_TLS = True
+-EMAIL_HOST = 'smtp.gmail.com'
+-EMAIL_HOST_USER = 'onionarchitecturemvc@gmail.com'
+-EMAIL_HOST_PASSWORD = 'djangotoplearn@pass'
+-EMAIL_PORT = 587
+ 
+ # default settings
+ JALALI_DATE_DEFAULTS = {
