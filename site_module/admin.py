@@ -7,11 +7,11 @@ class FooterLinkAdmin(admin.ModelAdmin):
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ['title', 'url', 'is_active']
-    list_editable = ['url', 'is_active']
+    list_display = ['title']
 
 
+
+admin.site.register(models.GalleryPhoto, GalleryAdmin)
 admin.site.register(models.SiteSetting)
 admin.site.register(models.FooterLinkBox)
 admin.site.register(models.FooterLink, FooterLinkAdmin)
-admin.site.register(models.Gallery, GalleryAdmin)

@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.views.generic.base import TemplateView
 
-from site_module.models import SiteSetting, FooterLinkBox, Gallery
+from site_module.models import SiteSetting, FooterLinkBox, GalleryPhoto
 
 
 class HomeView(TemplateView):
@@ -10,7 +10,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        gallery = Gallery.objects.filter(is_active=True)
+        gallery = GalleryPhoto.objects.all()
         context['gallery'] = gallery
         return context
 
